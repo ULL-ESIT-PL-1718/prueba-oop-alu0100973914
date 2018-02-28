@@ -1,0 +1,25 @@
+{
+	"name": "prueba-oop",
+	"version": "1.0.0",
+	"description": "Testing a published module",
+	"main": "index.js",
+	"scripts": {
+		"test": "rm -f salida.txt; (npm i --no-save --no-package-lock && node main.js | tee salida.txt) && (diff salida.txt expected.txt && echo 'OK!') || echo 'NOT OK' ",
+		"clean": "rm -fR salida.txt node_modules/ package-lock.json",
+		"version": "rm -f package-lock.json; npm la @alu0100973914/oop",
+		"update": "rm -f package-lock.json; npm update --no-save @alu0100973914/oop"
+	},
+	"keywords": [
+		"npm",
+		"packages",
+		"test"
+	],
+	"author": "Daute Rodríguez Rodríguez <alu0100973914@ull.edu.es> (https://github.com/alu0100973914)",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:ULL-ESIT-PL-1718/prueba-oop-alu0100973914.git"
+	},
+	"dependencies": {
+		"@alu0100973914/oop": "latest"
+	}
+}
